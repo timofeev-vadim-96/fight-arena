@@ -3,7 +3,10 @@
 
 > `Java Core. Семинар 1 Домашнее задание`  
 
-dockerfile находится в src/main/
+Установил Docker-desktop:
+![docker-desktop](docker-desktop.png)
+
+> dockerfile находится в src/main/
 
 `Компилляция` файла:  
 ```bash
@@ -39,3 +42,5 @@ docker run --rm --name arena fight_arena
   * -rm - удалить контейнер после того, как он отработает свой функционал
   * --name - именуем контейнер
   * fight_arena - образ
+
+![docker_run](docker_run.png)

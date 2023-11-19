@@ -1,0 +1,10 @@
+FROM bellsoft/liberica-openjdk-debian
+LABEL maintainer = "Vadim Timofeev"
+LABEL mt_telegram = "@vadim.yalta"
+COPY ./java /src
+ENV LANGUAGE ru_RU.UTF-8
+ENV LANG ru_RU.UTF-8
+ENV LC_ALL ru_RU.UTF-8
+RUN locale-gen ru_RU.UTF-8 && dpkg-reconfigure locales
+RUN javac -sourcepath ./src -d ./src/out ./src/org/example/Main.java
+CMD java -classpath ./src/out org.example.Main
